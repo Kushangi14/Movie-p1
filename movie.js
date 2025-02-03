@@ -78,9 +78,9 @@ function StartMeUp() {
     // videos[1].procRental()
     // videos[2].procRental()
 
-    for (let a = 0; a < videos.length; a++) {
-        videos[a].displayinfo()
-    }
+    // for (let a = 0; a < videos.length; a++) {
+    //     videos[a].displayinfo()
+    // }
     // videos[1].displayinfo()
     // videos[2].displayinfo()
 
@@ -90,9 +90,21 @@ function StartMeUp() {
     for (let k = 0; k < videos.length; k++) {
         // console.log(`Movie Name ${videos[k].title}\n number of rents: ${videos[k].numRents} \n Total video revenue :${videos[k].vidRevenue} `)
         table1 += `
+        <tr>
+                <td>Movie Name:</td>
+                <td>${videos[k].title}</td>
+            </tr>
             <tr>
                 <td>Movie category:</td>
-                <td>${videos[k].title}</td>
+                <td>${videos[k].category}</td>
+            </tr>
+            <tr>
+                <td>Movie Cast:</td>
+                <td>${videos[k].castInfo}</td>
+            </tr>
+            <tr>
+                <td>Movie Price:</td>
+                <td>${videos[k].price}</td>
             </tr>
             <tr>
                 <td>Movie Rents:</td>
@@ -149,40 +161,40 @@ VideoType.prototype.procRental = function () {
         this.castInfo = castInfo
     }
 
-    let table = ``
-    VideoType.prototype.displayinfo = function () {
-        // document.getElementById("name").innerHTML=this.title
-        // document.getElementById("category").innerHTML=this.category
-        // document.getElementById("cast").innerHTML=this.castInfo
-        // document.getElementById("price").innerHTML=this.price
+//     let table = ``
+//     VideoType.prototype.displayinfo = function () {
+//         // document.getElementById("name").innerHTML=this.title
+//         // document.getElementById("category").innerHTML=this.category
+//         // document.getElementById("cast").innerHTML=this.castInfo
+//         // document.getElementById("price").innerHTML=this.price
 
-        // console.log(this.castInfo)
-        // document.write(`Movie Name:${this.title} \n Category: ${this.category} \n Cast: ${this.cast} \n Price: ${this.price}`)
-        table += `
-                <tr>
-                <td>Movie Name:</td>
-                <td>${this.title}</td>
-            </tr>
-            <tr>
-                <td>Movie category:</td>
-                <td>${this.category}</td>
-            </tr>
-            <tr>
-                <td>Movie Cast:</td>
-                <td>${this.castInfo}</td>
-            </tr>
-            <tr>
-                <td>Movie Price:</td>
-                <td>${this.price}</td>
-            </tr>
-            <tr>
-            <td>_____________________________________________________________</td>
-            <td>_____________________________________________________________</td>
-            </tr>
-            `;
+//         // console.log(this.castInfo)
+//         // document.write(`Movie Name:${this.title} \n Category: ${this.category} \n Cast: ${this.cast} \n Price: ${this.price}`)
+//         table += `
+//                 <tr>
+//                 <td>Movie Name:</td>
+//                 <td>${this.title}</td>
+//             </tr>
+//             <tr>
+//                 <td>Movie category:</td>
+//                 <td>${this.category}</td>
+//             </tr>
+//             <tr>
+//                 <td>Movie Cast:</td>
+//                 <td>${this.castInfo}</td>
+//             </tr>
+//             <tr>
+//                 <td>Movie Price:</td>
+//                 <td>${this.price}</td>
+//             </tr>
+//             <tr>
+//             <td>_____________________________________________________________</td>
+//             <td>_____________________________________________________________</td>
+//             </tr>
+//             `;
 
-            document.getElementById("table").innerHTML = table
-    }
+//             document.getElementById("table").innerHTML = table
+//     }
 }
 // Window.onload = StartMeUp();
 
